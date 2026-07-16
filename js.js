@@ -1,5 +1,4 @@
-const parallaxCards = document.querySelectorAll(".parallax-card");
-const firstPage = document.querySelector(".first-page-container");
+const parallaxCards = document.querySelectorAll(".zones__card");
 const hero = document.querySelector(".hero");
 const bg = document.querySelector(".bg");
 const prefersReducedMotion = window.matchMedia(
@@ -11,7 +10,7 @@ function updateParallax() {
     parallaxCards.forEach((card) => {
       const rect = card.getBoundingClientRect();
       const speed = Number(card.dataset.parallaxSpeed) || 0.14;
-      const bgElement = card.querySelector(".parallax-card-bg");
+      const bgElement = card.querySelector(".zones__card-bg");
       if (bgElement) {
         if (prefersReducedMotion.matches) {
           bgElement.style.transform = "translate3d(0, 0, 0) scale(1.08)";
@@ -46,13 +45,13 @@ const observerFadeUp = new IntersectionObserver(
   },
 );
 
-document.querySelectorAll(".fade-up, [class*='delay-']").forEach((element) => {
+document.querySelectorAll(".u-fade-up, [class*='u-delay-']").forEach((element) => {
   observerFadeUp.observe(element);
 });
 
 // Trigger animations for elements already in viewport on page load
 window.addEventListener("load", () => {
-  document.querySelectorAll(".fade-up, [class*='delay-']").forEach((element) => {
+  document.querySelectorAll(".u-fade-up, [class*='u-delay-']").forEach((element) => {
     const rect = element.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
       element.classList.add("show");
@@ -63,22 +62,22 @@ window.addEventListener("load", () => {
 window.addEventListener("scroll", updateParallax);
 window.addEventListener("resize", updateParallax);
 window.addEventListener("load", () => {
-  if (firstPage) {
-    firstPage.classList.add("active");
+  if (hero) {
+    hero.classList.add("active");
   }
   updateParallax();
 });
 
 updateParallax();
 
-// --- FAQ: кастомный аккордеон с плавной анимацией ---
+// --- FAQ: custom accordion with smooth animation ---
 window.addEventListener("load", () => {
-  const faqItems = document.querySelectorAll(".faq-item");
+  const faqItems = document.querySelectorAll(".faq__item");
   if (!faqItems.length) return;
 
   faqItems.forEach((item) => {
-    const btn = item.querySelector(".faq-question");
-    const answer = item.querySelector(".faq-answer");
+    const btn = item.querySelector(".faq__question");
+    const answer = item.querySelector(".faq__answer");
     if (!btn || !answer) return;
 
     answer.style.overflow = "hidden";
@@ -86,12 +85,12 @@ window.addEventListener("load", () => {
     answer.style.transition = "max-height 0.35s ease";
 
     function open() {
-      // Закрываем другие открытые элементы (аккордеон: только один открыт)
-      const opened = document.querySelectorAll(".faq-item.open");
+      // Close other open items (accordion: only one open at a time)
+      const opened = document.querySelectorAll(".faq__item.open");
       opened.forEach((other) => {
         if (other === item) return;
-        const otherAnswer = other.querySelector(".faq-answer");
-        const otherBtn = other.querySelector(".faq-question");
+        const otherAnswer = other.querySelector(".faq__answer");
+        const otherBtn = other.querySelector(".faq__question");
         if (otherAnswer) {
           if (otherAnswer.style.maxHeight === "none") {
             otherAnswer.style.maxHeight = otherAnswer.scrollHeight + "px";
@@ -153,7 +152,7 @@ window.addEventListener("load", () => {
 const observerCounter = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      const counters = entry.target.querySelectorAll(".counter");
+      const counters = entry.target.querySelectorAll(".js-counter");
 
       counters.forEach((counter) => {
         const target = +counter.dataset.target;

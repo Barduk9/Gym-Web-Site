@@ -1,0 +1,154 @@
+/* ============ About ============ */
+
+.about {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+.about__content {
+  margin: 45px 0px 0px 0px;
+}
+
+.about__title {
+  font-size: 6em;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.about__title::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 4px;
+  background: linear-gradient(to right, red, white);
+  margin: 0px auto 0;
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 35px;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 35px;
+}
+
+.about__stat-number {
+  font-size: 4em;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  color: red;
+  text-align: center;
+}
+
+.about__stat-label {
+  font-size: 1em;
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  color: #d8d3d4;
+  text-align: center;
+}
+
+.about__stat {
+  border: 1px solid #2a2a2a;
+  padding: 20px 20px 20px 20px;
+  background: #0a0a0a;
+  color: white;
+  transition:
+    border-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.25s ease;
+}
+
+.about__stat:hover {
+  border-color: red;
+  transform: scale(1.04);
+}
+
+.about__card {
+  border: 1px solid #2a2a2a;
+  padding: 25px 15px 15px 20px;
+  background: #0a0a0a;
+  color: white;
+  transition:
+    border-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.25s ease;
+}
+
+.about__card:hover {
+  border-color: red;
+  transform: scale(1.04);
+}
+
+.about__title-highlight,
+.why__title-highlight {
+  color: red;
+}
+
+.about__card-icon-image {
+  width: 4cap;
+  height: auto;
+}
+
+.about__card-title {
+  font-size: 1.5em;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+}
+
+.about__card-text {
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  color: #d8d3d4;
+}
+
+.about__creed {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #1f1f23;
+  padding: 30px 40px;
+  border-left: 4px solid red;
+  margin: 15px 35px 0px 35px;
+}
+
+.about__creed-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.about__creed-label {
+  font-size: 1.6em;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  color: red;
+}
+
+.about__creed-title {
+  font-size: 2.5em;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  display: block;
+  color: white;
+}
+
+.about__creed-text {
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  color: #d8d3d4;
+}

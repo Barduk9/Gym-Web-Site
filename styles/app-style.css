@@ -1,0 +1,224 @@
+/* ============ App promo ============ */
+
+.app-promo {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.app-promo__content {
+  position: relative;
+  margin: 0px auto 65px;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.app-promo__title {
+  font-size: 6em;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  color: #ff0000;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.app-promo__subtitle {
+  max-width: 680px;
+  margin: 0px auto 0;
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.05em;
+  line-height: 1;
+  opacity: 0.86;
+}
+
+.app-promo__title::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 4px;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0));
+  margin: 0px auto 0;
+}
+
+.app-promo__title-highlight {
+  color: #ffffff;
+}
+
+.app-promo__grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) auto;
+  gap: 25px;
+  margin: 35px auto 0;
+  max-width: 1180px;
+  justify-content: center;
+}
+
+.app-promo__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.app-promo__feature {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 24px 22px;
+  background: rgba(15, 15, 15, 0.96);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.app-promo__feature:hover {
+  transform: translateY(-3px);
+  border-color: #ff0000;
+}
+
+.app-promo__feature-icon {
+  flex: 0 0 76px;
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+}
+
+.app-promo__feature-icon img {
+  display: block;
+  width: 65px;
+  object-fit: contain;
+}
+
+.app-promo__feature-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.app-promo__feature-title {
+  font-size: 1.55em;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.04em;
+}
+
+.app-promo__feature-text {
+  font-size: 1.02em;
+  font-family: Arial, sans-serif;
+  color: #cfcfcf;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.app-promo__visual {
+  width: auto;
+  max-width: 410px;
+  display: grid;
+  gap: 0;
+  border-radius: 40px;
+  border: 1px solid rgb(255, 0, 0);
+  overflow: hidden;
+  position: relative;
+  background: #0a0a0a;
+}
+
+.app-promo__screen {
+  width: 100%;
+  overflow: hidden;
+}
+
+.app-promo__screen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.app-promo__visual:hover img {
+  transform: scale(1.02);
+}
+
+.app-promo__button {
+  font-size: 2em;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  background: linear-gradient(to right, red 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  margin-top: 25px;
+  padding: 15px 30px;
+  border: none;
+  transition:
+    background-position 0.4s ease,
+    color 0.4s ease,
+    transform 0.25s ease;
+}
+
+.app-promo__button:hover {
+  background-position: right bottom;
+  color: red;
+  transform: scale(1.04);
+}
+
+@media (max-width: 1024px) {
+  .app-promo__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .app-promo__visual {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .app-promo__screen {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 680px) {
+  .app-promo__content {
+    padding: 40px 18px 20px;
+  }
+
+  .app-promo__title {
+    font-size: 3.8em;
+  }
+
+  .app-promo__subtitle {
+    font-size: 0.98em;
+    margin: 16px auto 0;
+  }
+
+  .app-promo__feature {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .app-promo__feature-icon {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-promo__feature-title {
+    font-size: 1.25em;
+  }
+
+  .app-promo__visual {
+    min-height: 420px;
+  }
+}

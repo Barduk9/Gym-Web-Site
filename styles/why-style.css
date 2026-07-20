@@ -1,0 +1,118 @@
+/* ============ Why choose ============ */
+
+.why {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.why__content {
+  margin: 45px 0px 0px 0px;
+}
+
+.why__title {
+  font-size: 6em;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.why__title::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 4px;
+  background: linear-gradient(to right, red, rgb(255, 255, 255));
+  margin: 0px auto 0;
+}
+
+.why__list {
+  color: white;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0px 0px 35px 0px;
+  list-style: none;
+  margin: 0;
+}
+
+.why__visual {
+  position: sticky;
+  top: 60px;
+  align-self: start;
+  max-width: 620px;
+}
+
+.why__visual img {
+  display: block;
+  position: relative;
+  width: 135%;
+  right: 15%;
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 40px;
+  margin: 35px auto 0;
+  max-width: 1280px;
+  align-items: start;
+}
+
+.why__item {
+  border: 1px solid #2a2a2a;
+  padding: 28px 22px 22px 22px;
+  background: #0a0a0a;
+  color: white;
+  transition:
+    border-color 0.4s ease,
+    background-linear-gradient 0.4s ease,
+    color 0.4s ease,
+    transform 0.25s ease;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to left, rgb(0, 0, 0) 100%, rgb(255, 0, 0) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+}
+
+.why__item:hover {
+  border-color: red;
+  transform: translateY(-4px);
+  background-position: left bottom;
+  background: linear-gradient(to left, rgb(0, 0, 0) 98%, rgb(255, 0, 0) 50%);
+  color: red;
+  transform: scale(1.04);
+}
+
+.why__item-icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.why__item-title {
+  font-size: 1.5em;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.why__item-text {
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  color: #c4c4c4;
+  margin-bottom: 0;
+}
+
+.why__item-icon-image {
+  width: 48px;
+  margin-bottom: 16px;
+}

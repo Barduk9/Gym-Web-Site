@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://barduk9.github.io/Gym-Web-Site/sitemap.xml

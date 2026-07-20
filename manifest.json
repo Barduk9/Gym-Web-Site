@@ -1,0 +1,14 @@
+{
+  "name": "SPARTA Gym",
+  "short_name": "SPARTA",
+  "icons": [
+    {
+      "src": "sparta-helmet.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#111111",
+  "background_color": "#111111",
+  "display": "standalone"
+}
